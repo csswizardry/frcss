@@ -3,34 +3,34 @@
 \*------------------------------------*/
 
 // Preconfigure these settings before the @import of this file.
-$form-ns: null !default;
-$form-item-padding: 0.25rem !default;
-$form-item-color: #668 !default;
-$form-item-font-family: sans-serif !default;
-$form-item-font-size: 12px !default;
-$form-item-border-color-hover: rgba(39,41,43,.6) !default;
-$form-item-border-color-bg: #FFF !default;
-$from-item-color-shadow: rgba(0, 137, 91, .6) !default;
+$input-text-ns: null !default;
+$input-text-padding: 0.25rem !default;
+$input-text-color: #668 !default;
+$input-text-font-family: sans-serif !default;
+$input-text-font-size: 12px !default;
+$input-text-border-color-hover: rgba(39,41,43,.6) !default;
+$input-text-border-color-bg: #FFF !default;
+$input-text-color-shadow: rgba(0, 137, 91, .6) !default;
 
 /**
  * Configurable form item component
  * 1. Reset all properties to browser default
  * 2. box-shadow transition
  */
-.#{$form-ns}c-input-text{
+.#{$input-text-ns}c-input-text {
   all: initial; /* [1] */
   border: 1px solid #C5C5C5;
-  padding: $form-item-padding;
-  color: $form-item-color;
-  font-family: $form-item-font-family;
-  font-size: $form-item-font-size;
+  padding: $input-text-padding;
+  color: $input-text-color;
+  font-family: $input-text-font-family;
+  font-size: $input-text-font-size;
   border-radius: .25rem;
   transition: 0.5s all; /* [2] */
 
   &:focus {
-    border-color: $form-item-border-color-hover;
+    border-color: $input-text-border-color-hover;
     border-radius: 0 .2857rem .2857rem 0;
-    background: $form-item-border-color-bg;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075),0 0 8px $from-item-color-shadow;
+    background: $input-text-border-color-bg;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075),0 0 8px $input-text-color-shadow;
   }
 }
