@@ -2,11 +2,12 @@
     #FOO
 \*------------------------------------*/
 
+// Preconfigure these settings before the @import of this file.
 $foo-ns: null !default;
 
 /**
- * 1. Reset all properties to browser default
+ * 1. Reset all properties to browser default.
  */
 .#{$foo-ns}foo {
-  all: initial; /* [1] */
+    all: initial; /* [1] */
 }
