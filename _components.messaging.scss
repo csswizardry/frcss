@@ -1,0 +1,134 @@
+/*------------------------------------*\
+    #MESSAGING
+\*------------------------------------*/
+
+// Preconfigure these settings before the @import of this file.
+$msg-ns: null !default;
+
+$msg-color-bg: #f9f9f9 !default;
+$msg-color-border: desaturate(darken($msg-color-bg, 25%), 50%) !default;
+$msg-color: desaturate(darken($msg-color-bg, 75%), 50%) !default;
+
+$msg-color-bg-danger: #fee !default;
+$msg-color-border-danger: desaturate(darken($msg-color-bg-danger, 25%), 50%) !default;
+$msg-color-danger: desaturate(darken($msg-color-bg-danger, 60%), 50%) !default;
+
+$msg-color-bg-info: #e0f3ff !default;
+$msg-color-border-info: desaturate(darken($msg-color-bg-info, 25%), 50%) !default;
+$msg-color-info: desaturate(darken($msg-color-bg-info, 60%), 50%) !default;
+
+$msg-color-bg-success: #f0ffe0 !default;
+$msg-color-border-success: desaturate(darken($msg-color-bg-success, 40%), 50%) !default;
+$msg-color-success: desaturate(darken($msg-color-bg-success, 70%), 50%) !default;
+
+$msg-color-bg-warning: #fff6d9 !default;
+$msg-color-border-warning: desaturate(darken($msg-color-bg-warning, 35%), 50%) !default;
+$msg-color-warning: desaturate(darken($msg-color-bg-warning, 70%), 50%) !default;
+
+$msg-font-family: sans-serif !default;
+$msg-font-size: 12px !default;
+$msg-font-style: italic !default;
+
+$msg-padding: 15px !default;
+
+/**
+ * Configurable messaging component. Provides a way to give context-specific messaging to the
+ * user in response to some interaction. Supports 5 variants of messaging component:
+ *
+ * Danger: error, failure or dangerous actions
+ * Info: general information, help and hints
+ * Success: response to successfully completed action
+ * Warning: non-blocking message about possibly undesirable action
+ * Default (unspecified): generic messaging container
+ *
+ * Example usage (with icons from FontAwesome):
+ *
+ *     <div class="c-message c-message--danger">
+ *         <i class="c-message__icon fa fa-times-circle"></i>
+ *         <div class="c-message__text">
+ *             There was a problem completing your request
+ *         </div>
+ *     </div>
+ *
+ * Icons are an optional addition to messaging components, but can provide an additional
+ * visual cue about the outcome of an action. The messaging component has agnostic support
+ * for any third-party icon library.
+ *
+ * 1. Reset all properties to browser default.
+ * 2. Ensure gutter before following content.
+ */
+.#{$msg-ns}c-message {
+    all: initial; /* [1] */
+    display: flex;
+    align-items: center;
+    padding: $msg-padding;
+    margin-bottom: 10px; /* [2] */
+    background-color: $msg-color-bg;
+    border: 1px $msg-color-border solid;
+    border-radius: 5px;
+}
+
+  .#{$msg-ns}c-message__icon {
+    margin-right: 5px;
+    color: $msg-color;
+    font-size: $msg-font-size;
+
+    .#{$msg-ns}c-message--danger > & {
+      color: $msg-color-danger;
+    }
+
+    .#{$msg-ns}c-message--info > & {
+      color: $msg-color-info;
+    }
+
+    .#{$msg-ns}c-message--success > & {
+      color: $msg-color-success;
+    }
+
+    .#{$msg-ns}c-message--warning > & {
+      color: $msg-color-warning;
+    }
+  }
+
+  .#{$msg-ns}c-message__text {
+    color: $msg-color;
+    font-family: $msg-font-family;
+    font-size: $msg-font-size;
+    font-style: $msg-font-style;
+
+    .#{$msg-ns}c-message--danger > & {
+      color: $msg-color-danger;
+    }
+
+    .#{$msg-ns}c-message--info > & {
+      color: $msg-color-info;
+    }
+
+    .#{$msg-ns}c-message--success > & {
+      color: $msg-color-success;
+    }
+
+    .#{$msg-ns}c-message--warning > & {
+      color: $msg-color-warning;
+    }
+  }
+
+  .#{$msg-ns}c-message--danger {
+    background-color: $msg-color-bg-danger;
+    border-color: $msg-color-border-danger;
+  }
+
+  .#{$msg-ns}c-message--info {
+    background-color: $msg-color-bg-info;
+    border-color: $msg-color-border-info;
+  }
+
+  .#{$msg-ns}c-message--success {
+    background-color: $msg-color-bg-success;
+    border-color: $msg-color-border-success;
+  }
+
+  .#{$msg-ns}c-message--warning {
+    background-color: $msg-color-bg-warning;
+    border-color: $msg-color-border-warning;
+  }
