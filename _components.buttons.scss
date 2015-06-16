@@ -47,3 +47,16 @@ $btn-font-family:       sans-serif !default;
     }
 
 }
+
+
+/**
+ * Provide size variants by halving or doubling the padding of the standard
+ * button.
+ */
+.#{$btn-ns}c-btn--small {
+    padding: round(0.5 * $btn-padding);
+}
+
+.#{$btn-ns}c-btn--large {
+    padding: round(2.0 * $btn-padding);
+}
