@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
+
+// Preconfigure these settings before the @import of this file.
+$lists-ns: null !default;
+
+/**
+ * Configurable layout objects for listing components
+ */
+.#{$lists-ns}o-list--bare {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
