@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    #FORM-ELEMENTS
+\*------------------------------------*/
+
+// Preconfigure these settings before the @import of this file.
+$legend-font-size: 1rem;
+$fieldset-color-border: #005639;
+$fieldset-padding: 1.5rem;
+
+$legend-color: #FFF;
+$legend-color-bg: #005639;
+$legend-padding: 0.25rem 1rem;
+$form-font-family: sans-serif;
+
+/**
+ * 1. Reset all properties to browser default.
+ */
+form {
+  all: initial; /* [1] */
+  font-family: $form-font-family;
+}
+
+
+fieldset {
+  font-size: $legend-font-size;
+  border: 2px solid $fieldset-color-border;
+  padding: $fieldset-padding;
+  border-radius: 0.5em;
+}
+
+/**
+ * 1. Reset all properties to browser default.
+ */
+legend {
+  color: $legend-color;
+  background: $legend-color-bg;
+  padding: $legend-padding;
+  border-radius: 1rem;
+}
+
+label {
+  font-weight: bold;
+}

@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    #TEXT-FIELDS
+    #INPUT-TEXT
 \*------------------------------------*/
 
 // Preconfigure these settings before the @import of this file.
@@ -8,7 +8,7 @@ $input-text-padding: 0.25rem !default;
 $input-text-color: #668 !default;
 $input-text-font-family: sans-serif !default;
 $input-text-font-size: 12px !default;
-$input-text-border-color-hover: rgba(39,41,43,.6) !default;
+$input-text-color-border-hover: rgba(39,41,43,.6) !default;
 $input-text-border-color-bg: #FFF !default;
 $input-text-color-shadow: rgba(0, 137, 91, .6) !default;
 
