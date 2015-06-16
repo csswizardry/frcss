@@ -32,6 +32,28 @@ $msg-font-style: italic !default;
 $msg-padding: 15px !default;
 
 /**
+ * Configurable messaging component. Provides a way to give context-specific messaging to the
+ * user in response to some interaction. Supports 5 variants of messaging component:
+ *
+ * Danger: error, failure or dangerous actions
+ * Info: general information, help and hints
+ * Success: response to successfully completed action
+ * Warning: non-blocking message about possibly undesirable action
+ * Default (unspecified): generic messaging container
+ *
+ * Example usage (with icons from FontAwesome):
+ *
+ *     <div class="c-message c-message--danger">
+ *         <i class="c-message__icon fa fa-times-circle"></i>
+ *         <div class="c-message__text">
+ *             There was a problem completing your request
+ *         </div>
+ *     </div>
+ *
+ * Icons are an optional addition to messaging components, but can provide an additional
+ * visual cue about the outcome of an action. The messaging component has agnostic support
+ * for any third-party icon library.
+ *
  * 1. Reset all properties to browser default.
  * 2. Ensure gutter before following content.
  */
