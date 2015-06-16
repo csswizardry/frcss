@@ -3,6 +3,8 @@
 \*------------------------------------*/
 
 // Preconfigure these settings before the @import of this file.
+$form-font-family: sans-serif;
+
 $legend-font-size: 1rem;
 $fieldset-color-border: #005639;
 $fieldset-padding: 1.5rem;
@@ -11,6 +13,9 @@ $legend-color: #FFF;
 $legend-color-bg: #005639;
 $legend-padding: 0.25rem 1rem;
 $form-font-family: sans-serif;
+
+$label-padding: 0.25rem 0;
+$label-color:  #002317;
 
 /**
  * 1. Reset all properties to browser default.
@@ -40,4 +45,7 @@ legend {
 
 label {
   font-weight: bold;
+  font-size: .75rem;
+  padding: $label-padding;
+  color: $label-color;
 }
