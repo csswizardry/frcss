@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #LIST-PAIR
+\*------------------------------------*/
+
+// Preconfigure these settings before the @import of this file.
+$list-pair-ns:  null !default;
+$list-pair-gap: 10px !default;
+
+/**
+ * Key-value pair list, usually applied to DL/DT/DD.
+ *
+ * 1. Reset all properties to browser default.
+ */
+.#{$list-pair-ns}o-list-pair {
+    all: initial; /* [1] */
+}
+
+    .#{$list-pair-ns}o-list-pair__key {
+    }
+    
+    /**
+     * 1. Remove indent from DD elements.
+     */
+    .#{$list-pair-ns}o-list-pair__val {
+        margin-left: 0; /* [1] */
+        margin-bottom: $list-pair-gap;
+    }
