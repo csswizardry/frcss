@@ -1,0 +1,82 @@
+/*------------------------------------*\
+    #MESSAGING
+\*------------------------------------*/
+
+// Preconfigure these settings before the @import of this file.
+$msg-ns: null !default;
+
+$msg-color-bg: #f9f9f9 !default;
+$msg-color-border: desaturate(darken($msg-color-bg, 25%), 50%) !default;
+$msg-color: desaturate(darken($msg-color-bg, 75%), 50%) !default;
+
+$msg-color-bg-danger: #fee !default;
+$msg-color-border-danger: desaturate(darken($msg-color-bg-danger, 25%), 50%) !default;
+$msg-color-danger: desaturate(darken($msg-color-bg-danger, 60%), 50%) !default;
+
+$msg-color-bg-info: #e0f3ff !default;
+$msg-color-border-info: desaturate(darken($msg-color-bg-info, 25%), 50%) !default;
+$msg-color-info: desaturate(darken($msg-color-bg-info, 60%), 50%) !default;
+
+$msg-color-bg-success: #f0ffe0 !default;
+$msg-color-border-success: desaturate(darken($msg-color-bg-success, 40%), 50%) !default;
+$msg-color-success: desaturate(darken($msg-color-bg-success, 70%), 50%) !default;
+
+$msg-color-bg-warning: #fff6d9 !default;
+$msg-color-border-warning: desaturate(darken($msg-color-bg-warning, 35%), 50%) !default;
+$msg-color-warning: desaturate(darken($msg-color-bg-warning, 70%), 50%) !default;
+
+/**
+ * 1. Reset all properties to browser default.
+ */
+.#{$msg-ns}c-message {
+    all: initial; /* [1] */
+    display: block;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: $msg-color-bg;
+    border: 1px $msg-color-border solid;
+    border-radius: 5px;
+}
+
+  .#{$msg-ns}c-message__text {
+    color: $msg-color;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: italic;
+  }
+
+  .#{$msg-ns}c-message--danger {
+    background-color: $msg-color-bg-danger;
+    border-color: $msg-color-border-danger;
+
+    > .#{$msg-ns}c-message__text {
+      color: $msg-color-danger;
+    }
+  }
+
+  .#{$msg-ns}c-message--info {
+    background-color: $msg-color-bg-info;
+    border-color: $msg-color-border-info;
+
+    > .#{$msg-ns}c-message__text {
+      color: $msg-color-info;
+    }
+  }
+
+  .#{$msg-ns}c-message--success {
+    background-color: $msg-color-bg-success;
+    border-color: $msg-color-border-success;
+
+    > .#{$msg-ns}c-message__text {
+      color: $msg-color-success;
+    }
+  }
+
+  .#{$msg-ns}c-message--warning {
+    background-color: $msg-color-bg-warning;
+    border-color: $msg-color-border-warning;
+
+    > .#{$msg-ns}c-message__text {
+      color: $msg-color-warning;
+    }
+  }
