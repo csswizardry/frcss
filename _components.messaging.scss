@@ -37,13 +37,36 @@ $msg-padding: 15px !default;
  */
 .#{$msg-ns}c-message {
     all: initial; /* [1] */
-    display: block;
+    display: flex;
+    align-items: center;
     padding: $msg-padding;
     margin-bottom: 10px; /* [2] */
     background-color: $msg-color-bg;
     border: 1px $msg-color-border solid;
     border-radius: 5px;
 }
+
+  .#{$msg-ns}c-message__icon {
+    margin-right: 5px;
+    color: $msg-color;
+    font-size: $msg-font-size;
+
+    .#{$msg-ns}c-message--danger > & {
+      color: $msg-color-danger;
+    }
+
+    .#{$msg-ns}c-message--info > & {
+      color: $msg-color-info;
+    }
+
+    .#{$msg-ns}c-message--success > & {
+      color: $msg-color-success;
+    }
+
+    .#{$msg-ns}c-message--warning > & {
+      color: $msg-color-warning;
+    }
+  }
 
   .#{$msg-ns}c-message__text {
     color: $msg-color;
