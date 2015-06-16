@@ -1,0 +1,109 @@
+/*------------------------------------*\
+    #COMMENTS
+\*------------------------------------*/
+
+// Preconfigure these settings before the @import of this file.
+$comments-ns: null !default;
+
+$comments-color: #333 !default;
+$comments-color-border: #d9d9d9 !default;
+$comments-color-date: lighten($comments-color, 40%);
+$comments-color-label: $comments-color !default;
+$comments-color-label-bg: #e9e9e9 !default;
+
+$comments-font-family: sans-serif !default;
+$comments-font-size-title: 16px !default;
+$comments-font-size-author: 12px !default;
+$comments-font-size-date: 12px !default;
+$comments-font-size-label: 12px !default;
+$comments-font-size-text: 13px !default;
+
+$comments-padding: 20px !default;
+$comments-padding-label: 5px !default;
+
+/**
+ * Configurable component for displaying comments. Comments are a text group
+ * that capture the following information:
+ *
+ * - Title
+ * - Author
+ * - Date
+ * - Labels (zero or more)
+ * - Text
+ *
+ * Example usage:
+ *
+ *     <div class="c-comment">
+ *         <header class="c-comment__header">
+ *             <h1 class="c-comment__title">Comment Title</h1>
+ *             <p class="c-comment__author">Joe Bloggs</p>
+ *             <time class="c-comment__date" datetime="2015-06-01 15:00">
+ *                 June 1st, 2015 at 3:00pm
+ *             </time>
+ *             <ul class="c-comment__labels">
+ *                 <li class="c-comment__label">
+ *                     General
+ *                 </li>
+ *             </ul>
+ *         </header>
+ *         <div class="c-comment__text">
+ *             Lorem ipsum....
+ *         </div>
+ *     </div>
+ */
+.#{$comments-ns}c-comment {
+  border-bottom: 1px $comments-color-border solid;
+  padding: $comments-padding;
+}
+
+  .#{$comments-ns}c-comment__header {}
+
+    .#{$comments-ns}c-comment__title {
+      all: initial;
+      font-family: $comments-font-family;
+      font-size: $comments-font-size-title;
+      color: $comments-color;
+    }
+
+    .#{$comments-ns}c-comment__author {
+      font-family: $comments-font-family;
+      font-size: $comments-font-size-author;
+      color: $comments-color;
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+
+    .#{$comments-ns}c-comment__date {
+      display: block;
+      margin-top: 5px;
+      font-family: $comments-font-family;
+      font-size: $comments-font-size-date;
+      font-style: italic;
+      color: $comments-color-date;
+    }
+
+    .#{$comments-ns}c-comment__labels {
+      all: initial;
+      display: flex;
+      list-style: none;
+      margin-top: 10px;
+    }
+
+      .#{$comments-ns}c-comment__label {
+        background-color: $comments-color-label-bg;
+        border-radius: 3px;
+        color: $comments-color-label;
+        font-family: $comments-font-family;
+        font-size: $comments-font-size-label;
+        padding: $comments-padding-label;
+        margin-right: 5px;
+      }
+
+  .#{$comments-ns}c-comment__text {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-family: $comments-font-family;
+    font-size: $comments-font-size-text;
+    line-height: 1.8;
+    color: $comments-color;
+  }
