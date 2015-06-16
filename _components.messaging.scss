@@ -25,14 +25,21 @@ $msg-color-bg-warning: #fff6d9 !default;
 $msg-color-border-warning: desaturate(darken($msg-color-bg-warning, 35%), 50%) !default;
 $msg-color-warning: desaturate(darken($msg-color-bg-warning, 70%), 50%) !default;
 
+$msg-font-family: sans-serif !default;
+$msg-font-size: 12px !default;
+$msg-font-style: italic !default;
+
+$msg-padding: 15px !default;
+
 /**
  * 1. Reset all properties to browser default.
+ * 2. Ensure gutter before following content.
  */
 .#{$msg-ns}c-message {
     all: initial; /* [1] */
     display: block;
-    padding: 15px;
-    margin-bottom: 10px;
+    padding: $msg-padding;
+    margin-bottom: 10px; /* [2] */
     background-color: $msg-color-bg;
     border: 1px $msg-color-border solid;
     border-radius: 5px;
@@ -40,9 +47,9 @@ $msg-color-warning: desaturate(darken($msg-color-bg-warning, 70%), 50%) !default
 
   .#{$msg-ns}c-message__text {
     color: $msg-color;
-    font-family: sans-serif;
-    font-size: 12px;
-    font-style: italic;
+    font-family: $msg-font-family;
+    font-size: $msg-font-size;
+    font-style: $msg-font-style;
 
     .#{$msg-ns}c-message--danger > & {
       color: $msg-color-danger;
