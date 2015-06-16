@@ -55,3 +55,16 @@ $btn-font-family:       sans-serif !default;
 .#{$btn-ns}c-btn--large {
     padding: round(2.0 * $btn-padding);
 }
+
+
+/**
+ * Create buttons that will fill the entire width of the container they’re
+ * placed inside.
+ *
+ * 1. Remove horizontal paddings so widths and paddings do not compound.
+ */
+.#{$btn-ns}c-btn--full {
+    padding-right: 0; /* [1] */
+    padding-left:  0; /* [1] */
+    width: 100%;
+}
