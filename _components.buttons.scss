@@ -26,6 +26,7 @@ $btn-font-family:       sans-serif !default;
     display: inline-block; /* [2] */
     vertical-align: middle; /* [3] */
     text-align: center; /* [4] */
+    text-decoration: none; /* [4] */
     cursor: pointer; /* [5] */
     padding: $btn-padding;
     color: $btn-color;
@@ -33,16 +34,10 @@ $btn-font-family:       sans-serif !default;
     font-family: $btn-font-family;
     font-size: $btn-font-size;
 
-    &,
     &:hover,
     &:active,
     &:focus {
         text-decoration: none; /* [4] */
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
         background-color: $btn-color-bg-hover;
     }
 
