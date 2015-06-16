@@ -21,7 +21,7 @@ $btn-font-family:       sans-serif !default;
  * 4. Reset/normalize some styles.
  * 5. Force all button-styled elements to appear clickable.
  */
-.#{$btn-ns}btn {
+.#{$btn-ns}c-btn {
     all: initial; /* [1] */
     display: inline-block; /* [2] */
     vertical-align: middle; /* [3] */
