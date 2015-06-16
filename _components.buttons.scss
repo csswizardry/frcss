@@ -40,7 +40,7 @@ $btn-font-family:       sans-serif !default;
         text-decoration: none; /* [4] */
     }
 
-    &:hover,
+    &:hover:not([disabled]),
     &:active,
     &:focus {
         background-color: $btn-color-bg-hover;
