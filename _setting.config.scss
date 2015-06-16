@@ -1,0 +1,17 @@
+///*----------------------------------*\
+//  #CONFIG
+//\*----------------------------------*/
+
+// Project-wide configuration, settings, and feature flags.
+$config: (
+    project: "players-page",
+    env: "dev",
+    debug: false,
+);
+
+// Retrieve config values by using `config(key)`, e.g.:
+//
+// @if (config(debug) == true) { ... }
+@function config($key) {
+    @return map-get($config, $key);
+}
