@@ -5,10 +5,15 @@
 /**
  * SETTINGS
  * Config...............Project-level config.
+ * Global...............Project-specific, globally available settings.
  *
  * TOOLS
  *
  * GENERIC
+ * Normalize.css........Normalise browser defaults…
+ * Reset................…and zero them out.
+ * Box-sizing...........More manageable box-model.
+ * Shared...............Share certain high-level styles as broadly as possible.
  *
  * ELEMENTS
  * Forms................Element-level form styling.
@@ -27,9 +32,18 @@
  */
 
 @import "settings.config";
+@import "settings.global";
+
+@import "generic.normalize";
+@import "generic.reset";
+@import "generic.box-sizing";
+@import "generic.shared";
+
 @import "elements.forms";
+
 @import "objects.list-bare";
 @import "objects.list-pair";
+
 @import "components.forms";
 @import "components.buttons";
 @import "components.comments";
