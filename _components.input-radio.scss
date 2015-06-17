@@ -5,6 +5,7 @@
 // Preconfigure these settings before the @import of this file.
 $input-radio-color-bg: #005639;
 $input-radio-color-border: #002317;
+$input-radio-label-font-family: sans-serif;
 
 /**
  * High-level wrapper element for custom radio inputs.
@@ -37,6 +38,7 @@ $input-radio-color-border: #002317;
  */
 .c-input-radio-dummy {
   display: block;
+  font-family: $input-radio-label-font-family;
 }
 
 .c-input-radio-dummy:after {
