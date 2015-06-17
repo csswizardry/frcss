@@ -1,0 +1,67 @@
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+
+// Preconfigure these settings before the @import of this file.
+$layout-ns:     null !default;
+$layout-gutter: 10px !default;
+
+/**
+ * A simple layout object to be used in conjunction with our width utility
+ * classes in order to rapidly construct layouts in the view.
+ */
+
+.#{$layout-ns}o-layout {
+    margin:  0;
+    padding: 0;
+    list-style: none;
+    margin-left: -$layout-gutter;
+}
+
+    .#{$layout-ns}o-layout__item {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        padding-left: $layout-gutter;
+    }
+
+
+
+
+
+/**
+ * Reverse layout items’ direction.
+ */
+.#{$layout-ns}o-layout--rev {
+  direction: rtl;
+
+  > .#{$layout-ns}o-layout__item {
+    direction: ltr;
+  }
+
+}
+
+
+
+
+
+/**
+ * Different sizes of layout item (gutters).
+ */
+.#{$layout-ns}o-layout--small {
+    margin-left: round(0.5 * -$layout-gutter);
+
+    > .#{$layout-ns}o-layout__item {
+        padding-left: round(0.5 * $layout-gutter);
+    }
+
+}
+
+.#{$layout-ns}o-layout--large {
+    margin-left: round(2 * -$layout-gutter);
+
+    > .#{$layout-ns}o-layout__item {
+        padding-left: round(2 * $layout-gutter);
+    }
+
+}

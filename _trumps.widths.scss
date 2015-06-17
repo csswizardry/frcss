@@ -1,0 +1,69 @@
+/*------------------------------------*\
+    #WIDTHS
+\*------------------------------------*/
+
+// Preconfigure these settings before the @import of this file.
+$widths-ns: null !default;
+
+// A mixin to spit out our width classes. Pass in the columns we want the widths
+// to have, and an optional suffix for responsive widths. E.g. to create thirds
+// and quarters for a small breakpoint:
+//
+// @include widths(3 4, -sm);
+
+@mixin widths($columns, $breakpoint: null) {
+
+    // Loop through the number of columns for each denominator of our fractions.
+    @each $denominator in $columns {
+
+        // Begin creating a numerator for our fraction up until we hit the
+        // denominator.
+        @for $numerator from 1 through $denominator {
+
+            // Build a class in the format `.u-3/4`.
+            .#{$widths-ns}u-#{$numerator}\/#{$denominator}#{$breakpoint} {
+                width: ($numerator / $denominator) * 100% !important;
+            }
+
+        }
+
+    }
+
+}
+
+/**
+ * A series of width helper classes that you can use to size things like grid
+ * systems. Classes take a fraction-like format (e.g. `.u-2/3`).
+ *
+ * Use these in your markup, e.g.:
+ *
+ * <div class="u-7/12">
+ *
+ */
+
+/**
+ * Generate width classes for all viewports.
+ */
+@include widths(1 2 3 4 5);
+
+
+
+
+
+/**
+ * Generate width classes for small viewports.
+ */
+@media screen and (min-width: 720px) {
+    @include widths(1 2 3 4 5, \@sm);
+}
+
+
+
+
+
+/**
+ * Generate width classes for medium viewports.
+ */
+@media screen and (min-width: 1024px) {
+    @include widths(1 2 3 4 5, \@md);
+}

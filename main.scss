@@ -19,6 +19,7 @@
  * Forms................Element-level form styling.
  *
  * OBJECTS
+ * Layout...............Simple Layout abstraction tool.
  * List-bare............‘Unstyled’ lists: bullets and indent removed.
  * List-pair............Simple key–value pair list.
  * Pack.................Force elements to pack up into all available space.
@@ -30,6 +31,8 @@
  * Messaging............User feedback messaging.
  *
  * TRUMPS
+ * Widths...............Width helper classes for use with our Layout system.
+ *
  */
 
 @import "settings.config";
@@ -42,6 +45,7 @@
 
 @import "elements.forms";
 
+@import "objects.layout";
 @import "objects.list-bare";
 @import "objects.list-pair";
 @import "objects.pack";
@@ -50,3 +54,5 @@
 @import "components.buttons";
 @import "components.comments";
 @import "components.messaging";
+
+@import "trumps.widths";
