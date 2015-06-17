@@ -3,12 +3,12 @@
 \*------------------------------------*/
 
 // Preconfigure these settings before the @import of this file.
-$lists-ns: null !default;
+$list-bare-ns: null !default;
 
 /**
  * Remove bullts and indents from lists.
  */
-.#{$lists-ns}o-list-bare {
+.#{$list-bare-ns}o-list-bare {
     margin:  0;
     padding: 0;
     list-style: none;
