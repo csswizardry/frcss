@@ -1,0 +1,117 @@
+/*------------------------------------*\
+    #FORMS
+\*------------------------------------*/
+
+// Preconfigure these settings before the @import of this file.
+$input-ns: null !default;
+
+
+
+
+
+/**
+ * Text input styles.
+ */
+
+// Preconfigure these settings before the @import of this file.
+$input-text-padding: 0.25rem !default;
+$input-text-color: #668 !default;
+$input-text-color-border-hover: rgba(39,41,43,.6) !default;
+$input-text-color-bg: #FFF !default;
+$input-text-color-shadow: rgba(0, 137, 91, .6) !default;
+$input-text-font-family: sans-serif !default;
+$input-text-font-size: 12px !default;
+
+/**
+ * Configurable form item component
+ * 1. Reset all properties to browser default
+ * 2. box-shadow transition
+ */
+.#{$input-ns}c-input-text {
+    all: initial; /* [1] */
+    border: 1px solid #C5C5C5;
+    padding: $input-text-padding;
+    color: $input-text-color;
+    font-family: $input-text-font-family;
+    font-size: $input-text-font-size;
+    border-radius: .25rem;
+    transition: 0.5s all; /* [2] */
+
+    &:focus {
+        border-color: $input-text-color-border-hover;
+        border-radius: 0 .2857rem .2857rem 0;
+        background: $input-text-color-bg;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075),0 0 8px $input-text-color-shadow;
+    }
+
+}
+
+
+
+
+
+/**
+ * Custom radio inputs.
+ */
+
+// Preconfigure these settings before the @import of this file.
+$input-radio-color-bg: #005639 !default;
+$input-radio-color-border: #002317 !default;
+
+/**
+ * High-level wrapper element for custom radio inputs.
+ *
+ * 1. Reset all properties to browser default.
+ */
+.#{$input-ns}c-input-radio-wrapper {
+    all: initial; /* [1]  */
+    display: inline-block;
+    cursor: pointer;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+/**
+ * 1. Hide the native input element.
+ * 2. Make so it sits on top of the input radio element.
+ */
+.c-input-radio {
+    border: 0;
+    opacity: 0; /* [1] */
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    position: absolute; /* [2]  */
+}
+
+/**
+ * Dummy element to provide faux styling.
+ */
+.#{$input-ns}c-input-radio-dummy {
+    display: block;
+
+    /**
+     * 1. Add some space to the right to accommodate the label content, for example.
+     * 2. Move them to the right edge so they are all vertically aligned.
+     */
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 1rem;
+        border: 0.125rem solid #fff;
+        box-shadow: 0 0 0 0.10rem $input-radio-color-border;
+        margin-left: 0.75rem; /* [1] */
+        transition: 0.5s ease all;
+        vertical-align: -0.125em;
+        float: right; /* [2] */
+
+        .#{$input-ns}c-input-radio:checked + & {
+            background: $input-radio-color-bg;
+            box-shadow: 0 0 0 0.25rem $input-radio-color-border;
+        }
+
+    }
+
+}

@@ -41,6 +41,15 @@ $btn-font-family:       sans-serif !default;
         background-color: $btn-color-bg-hover;
     }
 
+    /**
+     * 1. Forbid interaction with buttons that are disabled.
+     */
+    &[disabled],
+    &.is-disabled {
+        opacity: 0.5;
+        pointer-events: none; /* [1] */
+    }
+
 }
 
 

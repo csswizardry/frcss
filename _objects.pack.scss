@@ -1,0 +1,55 @@
+/*------------------------------------*\
+    #PACK
+\*------------------------------------*/
+
+// Preconfigure these settings before the @import of this file.
+$pack-ns: null !default;
+
+/**
+ * The Pack object simply forces an arbitrary number of elements to pack up
+ * horizontally into all the space available in their parent.
+ *
+ * Example usage:
+ *
+     <div class="o-pack  [o-pack--equal]">
+       <div class="o-pack__item">
+         ...
+       </div>
+       <div class="o-pack__item  [o-pack__item--full]">
+         ...
+       </div>
+       <div class="o-pack__item">
+         ...
+       </div>
+     </div>
+ *
+ * 1. Reset all properties to browser default.
+ * 2. This is where the magic happens.
+ */
+.#{$pack-ns}o-pack {
+    all: initial; /* [1] */
+    margin:  0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    display: table; /* [2] */
+}
+
+    .#{$pack-ns}o-pack__item {
+        display: table-cell; /* [2] */
+    }
+
+    /**
+     * Force one item to take up 100% of the space that the other items don’t
+     * need. Cannot be used within `.o-pack--equal` parents.
+     */
+    .#{$pack-ns}o-pack__item--full {
+        width: 100%;
+    }
+
+/**
+ * Force all packed items to occupy the same amount of space as each other.
+ */
+.#{$pack-ns}o-pack--equal {
+    table-layout: fixed;
+}
