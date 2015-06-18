@@ -17,6 +17,7 @@
  * Shared...............Share certain high-level styles as broadly as possible.
  *
  * ELEMENTS
+ * Headings.............H1–H6
  * Forms................Element-level form styling.
  *
  * OBJECTS
@@ -33,6 +34,7 @@
  *
  * TRUMPS
  * Widths...............Width helper classes for use with our Layout system.
+ * Headings.............Utilities onto our heading sizes.
  *
  */
 
@@ -46,6 +48,7 @@
 @import "generic.box-sizing";
 @import "generic.shared";
 
+@import "elements.headings";
 @import "elements.forms";
 
 @import "objects.layout";
@@ -58,4 +61,5 @@
 @import "components.comments";
 @import "components.messaging";
 
+@import "trumps.headings";
 @import "trumps.widths";

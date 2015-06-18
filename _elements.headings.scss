@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+
+// Preconfigure these settings before the @import of this file.
+
+$heading-size-1:        52px !default;
+$heading-size-2:        42px !default;
+$heading-size-3:        28px !default;
+$heading-size-4:        22px !default;
+$heading-size-5:        16px !default;
+$heading-size-6:        16px !default;
+
+h1 { @include font-size($heading-size-1); }
+h2 { @include font-size($heading-size-2); }
+h3 { @include font-size($heading-size-3); }
+h4 { @include font-size($heading-size-4); }
+h5 { @include font-size($heading-size-5); }
+h6 { @include font-size($heading-size-6); }
