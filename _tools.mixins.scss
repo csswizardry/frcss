@@ -1,0 +1,123 @@
+///*------------------------------------*\
+//    #MIXINS
+//\*------------------------------------*/
+
+// Create a fully formed type style (sizing and vertical rhythm) by passing in a
+// single value, e.g.:
+//
+// .foo {
+//     @include font-size(12px);
+// }
+//
+// This will generate a rem-based font-size with its pixel fallback, as well as
+// a unitless line-height which will place the element on your baseline, e.g.:
+//
+// .foo {
+//     font-size: 12px;
+//     font-size: 0.75rem;
+//     line-height: 2;
+// }
+//
+// If you do not want to generate a line-height automatically, you simply pass
+// in your own as a second paramater, e.g.:
+//
+// .foo {
+//     @include font-size(12px, 1.5);
+// }
+//
+// This will yield:
+//
+// .foo {
+//     font-size: 12px;
+//     font-size: 0.75rem;
+//     line-height: 1.5;
+// }
+//
+// This parameter can be any integer, ‘inherit’, or ‘normal’.
+//
+// If you don’t want a line-height at all, pass in a second paramater of ‘none’
+// or ‘false’, e.g.:
+//
+// .foo {
+//     @include font-size(12px, none);
+// }
+//
+// This will yield:
+//
+// .foo {
+//     font-size: 12px;
+//     font-size: 0.75rem;
+// }
+//
+// If you would like the rules to carry `!important`, pass in a third paramater
+// of ‘important’, e.g.:
+//
+// .foo {
+//     @include font-size(12px, none, important);
+// }
+//
+// This will yield:
+//
+// .foo {
+//     font-size: 12px !important;
+//     font-size: 0.75rem !important;
+// }
+
+@mixin font-size($font-size, $line-height: "auto", $important: false) {
+
+    @if ($important == "important") {
+        $important: unquote("!important");
+    } @else {
+        $important: null;
+    }
+
+    font-size: $font-size $important;
+    font-size: ($font-size / $base-font-size) * 1rem $important;
+
+    @if $line-height == "auto" {
+        line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size) $important;
+    }
+
+    @else {
+
+        @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
+            line-height: $line-height $important;
+        }
+
+        @elseif ($line-height != none and $line-height != false) {
+            @warn "D’oh! ‘#{$line-height}’ is not a valid value for `line-height`."
+        }
+
+    }
+
+}
+
+
+
+
+
+// Mixin to drop micro clearfix into a selector.
+//
+// .simple-usage {
+//   @include clearfix();
+// }
+//
+// .detailed-usage {
+//   @include clearfix(important);
+// }
+
+@mixin clearfix($important: false) {
+
+    @if ($important == "important") {
+        $important: unquote("!important");
+    } @else {
+        $important: null;
+    }
+
+    &:after {
+        content: "" $important;
+        display: table $important;
+        clear: both $important;
+    }
+
+}

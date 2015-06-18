@@ -8,6 +8,7 @@
  * Global...............Project-specific, globally available settings.
  *
  * TOOLS
+ * Mixins...............Global mixins.
  *
  * GENERIC
  * Normalize.css........Normalise browser defaults…
@@ -37,6 +38,8 @@
 
 @import "settings.config";
 @import "settings.global";
+
+@import "tools.mixins";
 
 @import "generic.normalize";
 @import "generic.reset";
