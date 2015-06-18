@@ -33,11 +33,34 @@ $layout-gutter: 10px !default;
  * Reverse layout items’ direction.
  */
 .#{$layout-ns}o-layout--rev {
-  direction: rtl;
+    direction: rtl;
 
-  > .#{$layout-ns}o-layout__item {
-    direction: ltr;
-  }
+    > .#{$layout-ns}o-layout__item {
+        direction: ltr;
+    }
+
+}
+
+
+
+
+
+/**
+ * Vertically align items to middles/bottoms of each other (top is the default).
+ */
+.#{$layout-ns}o-layout--middle {
+
+    > .#{$layout-ns}o-layout__item {
+        vertical-align: middle;
+    }
+
+}
+
+.#{$layout-ns}o-layout--bottom {
+
+    > .#{$layout-ns}o-layout__item {
+        vertical-align: bottom;
+    }
 
 }
 
