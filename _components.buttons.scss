@@ -8,8 +8,9 @@ $btn-color:             #fff !default;
 $btn-color-bg:          #005639 !default;
 $btn-color-bg-hover:    lighten($btn-color-bg, 10%) !default;
 $btn-padding:           10px !default;
-$btn-font-size:         12px !default;
-$btn-font-family:       sans-serif !default;
+
+$btn-custom: (
+) !default;
 
 
 /**
@@ -31,8 +32,10 @@ $btn-font-family:       sans-serif !default;
     padding: $btn-padding;
     color: $btn-color;
     background-color: $btn-color-bg;
-    font-family: $btn-font-family;
-    font-size: $btn-font-size;
+
+    @each $property, $value in $btn-custom {
+        #{$property}: $value;
+    }
 
     &:hover,
     &:active,

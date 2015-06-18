@@ -5,31 +5,31 @@
 // Preconfigure these settings before the @import of this file.
 $msg-ns: null !default;
 
-$msg-color-bg: #f9f9f9 !default;
-$msg-color-border: desaturate(darken($msg-color-bg, 25%), 50%) !default;
-$msg-color: desaturate(darken($msg-color-bg, 75%), 50%) !default;
+$msg-color-bg:              #f9f9f9 !default;
+$msg-color-border:          desaturate(darken($msg-color-bg, 25%), 50%) !default;
+$msg-color:                 desaturate(darken($msg-color-bg, 75%), 50%) !default;
 
-$msg-color-bg-danger: #fee !default;
-$msg-color-border-danger: desaturate(darken($msg-color-bg-danger, 25%), 50%) !default;
-$msg-color-danger: desaturate(darken($msg-color-bg-danger, 60%), 50%) !default;
+$msg-color-bg-danger:       #fee !default;
+$msg-color-border-danger:   desaturate(darken($msg-color-bg-danger, 25%), 50%) !default;
+$msg-color-danger:          desaturate(darken($msg-color-bg-danger, 60%), 50%) !default;
 
-$msg-color-bg-info: #e0f3ff !default;
-$msg-color-border-info: desaturate(darken($msg-color-bg-info, 25%), 50%) !default;
-$msg-color-info: desaturate(darken($msg-color-bg-info, 60%), 50%) !default;
+$msg-color-bg-info:         #e0f3ff !default;
+$msg-color-border-info:     desaturate(darken($msg-color-bg-info, 25%), 50%) !default;
+$msg-color-info:            desaturate(darken($msg-color-bg-info, 60%), 50%) !default;
 
-$msg-color-bg-success: #f0ffe0 !default;
-$msg-color-border-success: desaturate(darken($msg-color-bg-success, 40%), 50%) !default;
-$msg-color-success: desaturate(darken($msg-color-bg-success, 70%), 50%) !default;
+$msg-color-bg-success:      #f0ffe0 !default;
+$msg-color-border-success:  desaturate(darken($msg-color-bg-success, 40%), 50%) !default;
+$msg-color-success:         desaturate(darken($msg-color-bg-success, 70%), 50%) !default;
 
-$msg-color-bg-warning: #fff6d9 !default;
-$msg-color-border-warning: desaturate(darken($msg-color-bg-warning, 35%), 50%) !default;
-$msg-color-warning: desaturate(darken($msg-color-bg-warning, 70%), 50%) !default;
+$msg-color-bg-warning:      #fff6d9 !default;
+$msg-color-border-warning:  desaturate(darken($msg-color-bg-warning, 35%), 50%) !default;
+$msg-color-warning:         desaturate(darken($msg-color-bg-warning, 70%), 50%) !default;
 
-$msg-font-family: sans-serif !default;
-$msg-font-size: 12px !default;
-$msg-font-style: italic !default;
+$msg-font-family:           sans-serif !default;
+$msg-font-size:             12px !default;
+$msg-font-style:            italic !default;
 
-$msg-padding: 15px !default;
+$msg-padding:               15px !default;
 
 /**
  * Configurable messaging component. Provides a way to give context-specific messaging to the
