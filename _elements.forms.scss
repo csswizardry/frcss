@@ -17,11 +17,7 @@ $form-font-family: sans-serif;
 $label-padding: 0.25rem 0;
 $label-color:  #002317;
 
-/**
- * 1. Reset all properties to browser default.
- */
 form {
-  all: initial; /* [1] */
   font-family: $form-font-family;
 }
 

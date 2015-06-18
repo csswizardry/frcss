@@ -23,20 +23,18 @@ $pack-ns: null !default;
        </div>
      </div>
  *
- * 1. Reset all properties to browser default.
- * 2. This is where the magic happens.
+ * 1. This is where the magic happens.
  */
 .#{$pack-ns}o-pack {
-    all: initial; /* [1] */
     margin:  0;
     padding: 0;
     list-style: none;
     width: 100%;
-    display: table; /* [2] */
+    display: table; /* [1] */
 }
 
     .#{$pack-ns}o-pack__item {
-        display: table-cell; /* [2] */
+        display: table-cell; /* [1] */
     }
 
     /**

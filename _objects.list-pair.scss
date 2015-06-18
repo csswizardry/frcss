@@ -8,11 +8,10 @@ $list-pair-gap: 10px !default;
 
 /**
  * Key-value pair list, usually applied to DL/DT/DD.
- *
- * 1. Reset all properties to browser default.
  */
 .#{$list-pair-ns}o-list-pair {
-    all: initial; /* [1] */
+    margin:  0;
+    padding: 0;
 }
 
     .#{$list-pair-ns}o-list-pair__key {
