@@ -57,6 +57,10 @@
 @import "objects.pack";
 
 @import "components.forms";
+
+$btn-custom: (
+    font: inherit,
+);
 @import "components.buttons";
 @import "components.comments";
 @import "components.messaging";
