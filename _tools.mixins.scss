@@ -121,3 +121,32 @@
     }
 
 }
+
+
+
+
+
+// Simple truncation mixin to cut off text using an ellipsis after a certain
+// width.
+//
+// .simple-usage {
+//   @include truncate();
+// }
+//
+// .detailed-usage {
+//   @include truncate(<value>, important);
+// }
+
+@mixin truncate($limit: 100%, $important: false) {
+
+    @if ($important == "important") {
+        $important: unquote("!important");
+    } @else {
+        $important: null;
+    }
+
+    max-width: $limit $important;
+    white-space: nowrap $important;
+    overflow: hidden $important;
+    text-overflow: ellipsis $important;
+}

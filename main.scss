@@ -33,8 +33,9 @@
  * Messaging............User feedback messaging.
  *
  * TRUMPS
+ * Typography...........Utilities for manipulating text.
+ * Display..............Helper classes for showing or hiding content.
  * Widths...............Width helper classes for use with our Layout system.
- * Headings.............Utilities onto our heading sizes.
  *
  */
 
@@ -65,5 +66,6 @@ $btn-custom: (
 @import "components.comments";
 @import "components.messaging";
 
-@import "trumps.headings";
+@import "trumps.typography";
+@import "trumps.display";
 @import "trumps.widths";
