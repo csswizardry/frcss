@@ -67,3 +67,14 @@ $widths-ns: null !default;
 @media screen and (min-width: 1024px) {
     @include widths(1 2 3 4 5, \@md);
 }
+
+
+
+
+
+/**
+ * Generate width classes for large viewports.
+ */
+@media screen and (min-width: 1280px) {
+    @include widths(1 2 3 4 5, \@lg);
+}
