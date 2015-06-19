@@ -41,29 +41,27 @@ $widths-ns: null !default;
  *
  */
 
-/**
- * Generate width classes for all viewports.
- */
-@include widths(1 2 3 4 5);
+// Fill an array with our desired breakpoints and their nicknames (e.g. `lg`).
+$widths-breakpoints: (
+    'sm': 'screen and (min-width: 720px)',
+    'md': 'screen and (min-width: 1024px)',
+    'lg': 'screen and (min-width: 1280px)',
+    'xl': 'screen and (min-width: 1440px)',
+) !default;
 
+// Which columns would we like to generate?
+$widths-columns: 1 2 3 4 5 !default;
 
+// Build our breakpoint-agnostic widths.
+@include widths($widths-columns);
 
+$alias: foo;
 
+// Build each of our breakpoints’ widths.
+@each $alias, $condition in $widths-breakpoints {
 
-/**
- * Generate width classes for small viewports.
- */
-@media screen and (min-width: 720px) {
-    @include widths(1 2 3 4 5, \@sm);
-}
+    @media #{unquote($condition)} {
+        @include widths($widths-columns, \@#{$alias});
+    }
 
-
-
-
-
-/**
- * Generate width classes for medium viewports.
- */
-@media screen and (min-width: 1024px) {
-    @include widths(1 2 3 4 5, \@md);
 }

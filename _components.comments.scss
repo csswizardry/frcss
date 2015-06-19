@@ -43,9 +43,9 @@ $comments-padding-label:    5px !default;
  *                 </li>
  *             </ul>
  *         </header>
- *         <div class="c-comment__text">
+ *         <p class="c-comment__text">
  *             Lorem ipsum....
- *         </div>
+ *         </p>
  *     </div>
  */
 .#{$comments-ns}c-comment {
