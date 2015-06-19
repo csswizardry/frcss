@@ -34,7 +34,7 @@
  *
  * TRUMPS
  * Widths...............Width helper classes for use with our Layout system.
- * Headings.............Utilities onto our heading sizes.
+ * Typography...........Utilities for manipulating text.
  *
  */
 
@@ -65,5 +65,5 @@ $btn-custom: (
 @import "components.comments";
 @import "components.messaging";
 
-@import "trumps.headings";
+@import "trumps.typography";
 @import "trumps.widths";

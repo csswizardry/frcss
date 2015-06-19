@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
+
+/**
+ * Headings.
+ *
+ * Redefine our heading styles against utility classes. This gives us a double
+ * stranded heading hierarchy whereby we can style one heading as another, e.g.:
+ *
+     <h4 class="u-h1">I am an H4 that is the same size as an H1</h4>
+ *
+ */
+.u-h1 { @include font-size($heading-size-1, auto, important); }
+.u-h2 { @include font-size($heading-size-2, auto, important); }
+.u-h3 { @include font-size($heading-size-3, auto, important); }
+.u-h4 { @include font-size($heading-size-4, auto, important); }
+.u-h5 { @include font-size($heading-size-5, auto, important); }
+.u-h6 { @include font-size($heading-size-6, auto, important); }
+
+
+
+
+
+/**
+ * Adjustments.
+ *
+ * ‘Can you just make that text a little bigger?’
+ *
+ * Sure! Use these utilities to adjust the size of a span of text by a little
+ * bit more, or a little bit less, e.g.:
+ *
+     <p class="u-text++">A little bit bigger.</p>
+ *
+ */
+.u-text\+\+ { font-size: larger  !important; }
+.u-text--   { font-size: smaller !important; }
+
+
+
+
+
+/**
+ * Alignments.
+ */
+.u-text-right   { text-align:    right !important; }
+.u-text-left    { text-align: left     !important; }
+.u-text-center  { text-align:  center  !important; }
+.u-text-justify { text-align: justify  !important; }
