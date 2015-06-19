@@ -34,7 +34,7 @@ $btn-custom: (
     background-color: $btn-color-bg;
 
     @each $property, $value in $btn-custom {
-        #{$property}: $value;
+        #{$property}: unquote($value);
     }
 
     &:hover,
