@@ -54,3 +54,14 @@
 .u-text-left    { text-align: left     !important; }
 .u-text-center  { text-align:  center  !important; }
 .u-text-justify { text-align: justify  !important; }
+
+
+
+
+
+/**
+ * Truncation.
+ *
+ * Cause long spans of text to truncate after running out of horizontal space.
+ */
+.u-text-truncate { @include truncate(100%, important); }
