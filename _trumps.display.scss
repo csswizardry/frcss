@@ -1,0 +1,39 @@
+/*------------------------------------*\
+    #DISPLAY
+\*------------------------------------*/
+
+/**
+ * General helper classes for controlling display
+ *
+ * These are the basic classes you might need to apply to typical HTML content.
+ * If you find yourself needing something like `table`, `table-cell`, `flex`,
+ * etc., then you probably need a more complex object and shouldn't be using
+ * utility classes in the first place.
+ */
+
+.u-display-none         { display: none !important; }
+.u-display-block        { display: block !important; }
+.u-display-inline       { display: inline !important; }
+.u-display-inline-block { display: inline-block !important; }
+
+
+
+
+
+/**
+ * Completely hide content from view and from screenreaders.
+ */
+.u-hide                 { display: none !important; }
+
+/**
+ * Hide content from view, but leave it accessible to screenreaders.
+ *
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.u-hide-visually {
+    position: absolute !important;
+    width:  1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+}
