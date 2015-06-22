@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    #COMMENTS-MODAL
+\*------------------------------------*/
+
+// Preconfigure these settings before the @import of this file.
+$comments-modal-ns: null !default;
+$comments-modal-filter-width: 30% !default;
+$comments-modal-main-width: 70% !default;
+
+/**
+ * 1. Reset all properties to browser default.
+ */
+.#{$comments-modal-ns}c-comments-modal {
+    all: initial; /* [1] */
+}
+
+/**
+ * The filter options
+ */
+.c-comments-modal__filter-area {
+    width: $comments-modal-filter-width;
+}
+
+/**
+* The mainarea where comments are rendered
+*/
+.c-comments-modal__main-area {
+    width: $comments-modal-main-width;
+}
