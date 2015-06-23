@@ -17,13 +17,13 @@ $comments-modal-main-width: 70% !default;
 /**
  * The filter options
  */
-.c-comments-modal__filter-area {
+.#{$comments-modal-ns}c-comments-modal__filter-area {
     width: $comments-modal-filter-width;
 }
 
 /**
 * The mainarea where comments are rendered
 */
-.c-comments-modal__main-area {
+.#{$comments-modal-ns}c-comments-modal__main-area {
     width: $comments-modal-main-width;
 }
