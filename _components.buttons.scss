@@ -9,6 +9,7 @@ $btn-color-bg:          #005639 !default;
 $btn-color-bg-hover:    lighten($btn-color-bg, 10%) !default;
 $btn-padding:           10px !default;
 $btn-margin:            5px !default;
+$btn-font-family:      sans-serif !default;
 
 $btn-custom: (
 ) !default;
@@ -34,6 +35,8 @@ $btn-custom: (
     margin: $btn-margin;
     color: $btn-color;
     background-color: $btn-color-bg;
+    font-size: 12px;
+    font-family: $btn-font-family;
 
     @each $property, $value in $btn-custom {
         #{$property}: unquote($value);

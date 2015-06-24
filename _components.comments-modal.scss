@@ -18,24 +18,22 @@ $comments-modal-height: 650px !default;
     padding: 2.5%;
 }
 
-/**
- * The filter options
- */
-.#{$comments-modal-ns}c-comments-modal__filter-area {
-    width: $comments-modal-filter-width;
-    position: fixed;
-}
+    /**
+     * The filter options
+     */
+    .#{$comments-modal-ns}c-comments-modal__filter-area {
+        width: $comments-modal-filter-width;
+        position: fixed;
+    }
 
-/**
-* The main area where comments are rendered
-*/
-.#{$comments-modal-ns}c-comments-modal__main-area {
-    width: $comments-modal-main-width;
-    padding-left: 2%;
-}
+    /**
+    * The main area where comments are rendered
+    */
+    .#{$comments-modal-ns}c-comments-modal__main-area {
+        width: $comments-modal-main-width;
+        padding-left: 2%;
+    }
 
-.#{$comments-modal-ns}c-comments-modal__comments {
-    height: $comments-modal-height;
-    overflow: auto;
-    margin: 0;
-}
+    .#{$comments-modal-ns}c-comments-modal__comment-box {
+        text-align: left;
+    }
