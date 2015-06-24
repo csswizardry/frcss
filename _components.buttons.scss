@@ -8,6 +8,7 @@ $btn-color:             #fff !default;
 $btn-color-bg:          #005639 !default;
 $btn-color-bg-hover:    lighten($btn-color-bg, 10%) !default;
 $btn-padding:           10px !default;
+$btn-margin:            5px !default;
 
 $btn-custom: (
 ) !default;
@@ -30,6 +31,7 @@ $btn-custom: (
     text-decoration: none; /* [4] */
     cursor: pointer; /* [5] */
     padding: $btn-padding;
+    margin: $btn-margin;
     color: $btn-color;
     background-color: $btn-color-bg;
 

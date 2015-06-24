@@ -15,7 +15,7 @@ $comments-font-family:      sans-serif !default;
 $comments-font-size:        12px !default;
 $comments-font-size-title:  16px !default;
 
-$comments-padding:          20px !default;
+$comments-padding:          5px !default;
 $comments-padding-label:    5px !default;
 
 /**
@@ -102,4 +102,5 @@ $comments-padding-label:    5px !default;
     font-family: $comments-font-family;
     line-height: 1.8;
     color: $comments-color;
+    text-align: justify;
   }

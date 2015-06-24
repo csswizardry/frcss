@@ -4,14 +4,18 @@
 
 // Preconfigure these settings before the @import of this file.
 $comments-modal-ns: null !default;
-$comments-modal-filter-width: 25% !default;
-$comments-modal-main-width: 65% !default;
+$comments-modal-filter-width: 35% !default;
+$comments-modal-main-width: 60% !default;
+
+// The height of the comment list container
+$comments-modal-height: 650px !default;
 
 /**
- * 1. Reset all properties to browser default.
+ *
  */
 .#{$comments-modal-ns}c-comments-modal {
-    all: initial; /* [1] */
+    box-sizing: border-box;
+    padding: 2.5%;
 }
 
 /**
@@ -23,9 +27,15 @@ $comments-modal-main-width: 65% !default;
 }
 
 /**
-* The mainarea where comments are rendered
+* The main area where comments are rendered
 */
 .#{$comments-modal-ns}c-comments-modal__main-area {
     width: $comments-modal-main-width;
-    padding-left: calc(35% + 2rem);
+    padding-left: 2%;
+}
+
+.#{$comments-modal-ns}c-comments-modal__comments {
+    height: $comments-modal-height;
+    overflow: auto;
+    margin: 0;
 }
