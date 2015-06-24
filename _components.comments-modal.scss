@@ -34,6 +34,12 @@ $comments-modal-height: 650px !default;
         padding-left: 2%;
     }
 
+        .#{$comments-modal-ns}c-comments-modal__comments {
+            height: $comments-modal-height;
+            overflow: auto;
+            margin: 0;
+        }
+
     .#{$comments-modal-ns}c-comments-modal__comment-box {
         text-align: left;
     }
