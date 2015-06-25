@@ -5,10 +5,6 @@
 // Preconfigure these settings before the @import of this file.
 $input-ns: null !default;
 
-
-
-
-
 /**
  * Text input styles.
  */
@@ -56,8 +52,8 @@ $input-text-font-size:          12px !default;
  */
 
 // Preconfigure these settings before the @import of this file.
-$input-radio-color-bg:          #005639 !default;
-$input-radio-color-border:      #002317 !default;
+$input-radio-color-bg:          $base-fr-color !default;
+$input-radio-color-border:      $base-fr-color-border !default;
 $input-radio-label-font-family: sans-serif !default;
 $input-radio-label-font-size: 12px !default;
 
@@ -78,7 +74,7 @@ $input-radio-label-font-size: 12px !default;
  * 1. Hide the native input element.
  * 2. Make so it sits on top of the input radio element.
  */
-.c-input-radio {
+.#{$input-ns}c-input-radio {
     border: 0;
     opacity: 0; /* [1] */
     height: 0;
@@ -119,4 +115,68 @@ $input-radio-label-font-size: 12px !default;
 
     }
 
+}
+
+/**
+ * Custom checkboxes.
+ */
+
+// Preconfigure these settings before the @import of this file.
+$input-checkbox-width:             2rem !default;
+$input-checkbox-color-border:      rgb(192,192,192) !default;
+$input-checkbox-font-family:       sans-serif !default;
+$input-checkbox-color-bg:          rgb(224,224,224);
+
+.#{$input-ns}c-input-checkbox-wrapper {
+    text-align: left;
+}
+
+    /**
+     * The actual checkbox input element
+     *
+     * 1. Restore font-size; browsers use smaller font-size for checkboxes
+     * 2. Hide the native representation of input checkbox
+     */
+    .#{$input-ns}c-input-checkbox {
+        width: $input-checkbox-width;
+        margin: 0;
+        padding: 0;
+        font-size: 1rem; /* [1]  */
+        opacity: 0; /* [2]  */
+        text-align: left;
+    }
+
+    .#{$input-ns}c-input-checkbox-label {
+        display: inline-block;
+        margin-left: -2rem;
+        line-height: 1.5rem;
+        font-family: $input-checkbox-font-family;
+        width: 100%;
+        display: inline-block;
+    }
+
+        .#{$input-ns}c-input-checkbox-label-text {
+            display          : inline-block;
+            width            : 0.875rem;
+            height           : 0.875rem;
+            margin           : 0.25rem 0.5rem 0.25rem 0.25rem;
+            border           : 0.0625rem solid $input-checkbox-color-border;
+            border-radius    : 0.25rem;
+            background       : $input-checkbox-color-bg;
+            background-image : linear-gradient(rgb(240,240,240),rgb(224,224,224));
+            vertical-align   : bottom;
+            position: absolute;
+            right: 0;
+        }
+
+        .#{$input-ns}c-input-checkbox:checked + .#{$input-ns}c-input-checkbox-label > .#{$input-ns}c-input-checkbox-label-text:before {
+    content     : '✓';
+    display     : block;
+    width       : 1rem;
+    color       : $base-fr-color;
+    font-size   : 0.875rem;
+    line-height : 1rem;
+    text-align  : center;
+    text-shadow : 0 0 0.0714rem rgb(115,153,77);
+    font-weight : bold;
 }
