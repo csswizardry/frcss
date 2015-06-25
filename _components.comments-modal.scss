@@ -6,9 +6,7 @@
 $comments-modal-ns: null !default;
 $comments-modal-filter-width: 35% !default;
 $comments-modal-main-width: 60% !default;
-
-// The height of the comment list container
-$comments-modal-height: 650px !default;
+$comments-modal-main-height: 400px !default;
 
 /**
  *
@@ -35,7 +33,7 @@ $comments-modal-height: 650px !default;
     }
 
         .#{$comments-modal-ns}c-comments-modal__comments {
-            height: $comments-modal-height;
+            height: $comments-modal-main-height;
             overflow: auto;
             margin: 0;
         }
