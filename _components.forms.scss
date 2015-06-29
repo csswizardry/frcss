@@ -167,16 +167,16 @@ $input-checkbox-color-bg:          rgb(224,224,224);
         }
 
         .#{$input-ns}c-input-checkbox:checked + .#{$input-ns}c-input-checkbox-label > .#{$input-ns}c-input-checkbox-label-text:before {
-    content     : '✓';
-    display     : block;
-    width       : 1rem;
-    color       : $base-fr-color;
-    font-size   : 0.875rem;
-    line-height : 1rem;
-    text-align  : center;
-    text-shadow : 0 0 0.0714rem rgb(115,153,77);
-    font-weight : bold;
-}
+            content     : '✓';
+            display     : block;
+            width       : 1rem;
+            color       : $base-fr-color;
+            font-size   : 0.875rem;
+            line-height : 1rem;
+            text-align  : center;
+            text-shadow : 0 0 0.0714rem rgb(115,153,77);
+            font-weight : bold;
+        }
 
 
 /**
