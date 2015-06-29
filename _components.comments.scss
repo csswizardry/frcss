@@ -8,6 +8,7 @@ $comments-ns:               null !default;
 $comments-color:            #333 !default;
 $comments-color-border:     #d9d9d9 !default;
 $comments-color-date:       lighten($comments-color, 40%);
+$comment-color-btn:         lighten($comments-color, 40%);
 $comments-color-label:      $comments-color !default;
 $comments-color-label-bg:   #e9e9e9 !default;
 
@@ -52,6 +53,7 @@ $comments-padding-label:    5px !default;
   border-bottom: 1px $comments-color-border solid;
   padding: $comments-padding;
   font-size: $comments-font-size;
+  text-align: left;
 }
 
   .#{$comments-ns}c-comment__header {}
@@ -62,7 +64,18 @@ $comments-padding-label:    5px !default;
       font-family: $comments-font-family;
       font-size: $comments-font-size-title;
       color: $comments-color;
+      text-align: left;
     }
+      .#{$comments-ns}c-comment__actions--delete {
+        float: right;
+        cursor: pointer;
+        color: $comment-color-btn;
+        transition: all 1s;
+
+        &:hover {
+          color: $comments-color;
+        }
+      }
 
     .#{$comments-ns}c-comment__author {
       font-family: $comments-font-family;

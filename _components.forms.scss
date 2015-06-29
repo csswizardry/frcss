@@ -44,9 +44,6 @@ $input-text-font-size:          12px !default;
 }
 
 
-
-
-
 /**
  * Custom radio inputs.
  */
@@ -179,4 +176,16 @@ $input-checkbox-color-bg:          rgb(224,224,224);
     text-align  : center;
     text-shadow : 0 0 0.0714rem rgb(115,153,77);
     font-weight : bold;
+}
+
+
+/**
+ * Custom select box
+ */
+.#{$input-ns}c-select {
+    border: 1px solid $base-fr-color;
+    font-size: 14px;
+    color: #fff;
+    background: $base-fr-color;
+    padding: 5px;
 }
